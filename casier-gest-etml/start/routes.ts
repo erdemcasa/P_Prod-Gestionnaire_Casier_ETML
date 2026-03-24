@@ -10,6 +10,7 @@ import { middleware } from '#start/kernel'
 import LockersController from '#controllers/lockers_controller'
 import LoginController from '#controllers/auth/login_controller'
 import LogoutController from '#controllers/auth/logout_controller'
+import RequestsController from '#controllers/requests_controller'
 
 
 router.group(() => {
@@ -22,10 +23,15 @@ router.group(() => {
 
 router.group(() => {
 
-  router.get('/', [LockersController, 'index']).as('home')
+  //router.get('/', [LockersController, 'freeLockers']).as('home')
+
+  router.get('/casiers-libres', [LockersController, 'freeLockers']).as('home')
+
+  router.get('/casiers/:locker_id/request', [RequestsController, 'store']).as('request.store')
+
+
 
   router.post('/logout', [LogoutController, 'handle']).as('auth.logout')
-
 
 }).use(middleware.auth())
 

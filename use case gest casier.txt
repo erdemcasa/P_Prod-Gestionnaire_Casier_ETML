@@ -1,0 +1,20 @@
+USE CASE
+
+Implémenté
+En tant qu'étudiant, je veux pouvoir soumettre une demande d'attribution de casier afin d'en obtenir un pour la durée de ma formation.
+En tant qu'utilisateur, je veux pouvoir m'authentifier sur la plateforme afin d'accéder aux fonctionnalités correspondant à mon rôle (étudiant ou administrateur).
+
+
+À implémenter
+En tant qu'étudiant, je veux pouvoir sélectionner le site de mon choix (Sébeillon ou Vennes) lors de ma demande afin d'obtenir un casier proche de mon lieu de formation.
+En tant qu'étudiant, je veux recevoir une notification par e-mail lorsque ma demande a été acceptée ou refusée afin d'être informé rapidement de son traitement.
+En tant qu'étudiant, je veux pouvoir consulter l'état de ma demande en cours afin de savoir si elle est en attente, acceptée ou refusée.
+En tant qu'étudiant, je veux pouvoir libérer mon casier lorsque je n'en ai plus besoin afin de le rendre disponible pour d'autres étudiants.
+
+En tant qu'Admin, je veux disposer d'une vue d'ensemble de tous les casiers, quel que soit leur statut (libre, occupé, en attente), afin de gérer efficacement le parc de casiers.
+En tant qu'Admin, je veux pouvoir rechercher et filtrer les casiers par numéro de casier, site, identifiant ou nom de l'étudiant associé afin de retrouver rapidement une information spécifique.
+En tant qu'Admin, je veux disposer d'une vue dédiée aux demandes en attente afin de les traiter (accepter ou refuser) de manière centralisée.
+En tant qu'Admin, je veux pouvoir attribuer manuellement un casier à un étudiant afin de gérer les cas particuliers sans passer par le processus de demande standard.
+En tant qu'Admin, je veux pouvoir exporter la liste des casiers en un format souhaitée : excel, json 
+En tant qu'Admin, je veux pouvoir marquer un casier comme "Hors service" (verrou cassé, etc.) afin qu'il ne soit pas proposé aux étudiants.
+En tant qu'Admin, je veux pouvoir attribuer manuellement un casier à un étudiant pour gérer les cas particuliers ou les urgences.

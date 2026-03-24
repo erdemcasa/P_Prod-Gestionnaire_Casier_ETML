@@ -22,10 +22,8 @@ export default class LockersController {
   async freeLockers({ view, auth }: HttpContext) {
     const student = auth.use('web').user
 
-    // Récupère tous les casiers triés par lockerNumber (croissant)
     const lockers = await Locker.query().orderBy('lockerNumber', 'asc')
 
-    // Ajoute isRequested pour chaque casier
     for (const locker of lockers) {
       const request = await Request.query().where('lockerId', locker.id).first()
       locker.isRequested = !!request
@@ -33,7 +31,7 @@ export default class LockersController {
 
     return view.render('pages/freeLockers', {
       freeLockers: lockers,
-      student, // si besoin dans la vue
+      student,
     })
   }
   /**
@@ -51,7 +49,6 @@ export default class LockersController {
    */
   async show({view, params }: HttpContext) {
 
-    // SELECT locker_id FROM lockers
     const locker = await Locker.query().where('id', params.locker_id).firstOrFail()
 
     //dd(locker)
